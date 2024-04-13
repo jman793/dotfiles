@@ -1,16 +1,12 @@
 # themes from https://github.com/alacritty/alacritty-theme
 
-# import = ["/Users/mischa/.config/alacritty/themes/themes/gruvbox_dark.toml"]
-import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+import = ["~/.config/alacritty/themes/themes/catppuccin_macchiato.toml"]
 
 [font]
-size = 25
+size = 15
 
 [font.normal]
-family = "UbuntuMono Nerd Font"
-
-[window]
-decorations = "none"
+family = "JetBrains Mono"
 
 [window.padding]
 x = 7
