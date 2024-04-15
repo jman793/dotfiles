@@ -1,5 +1,6 @@
 return {
   { import = "plugins.custom.rust_config" },
+  { import = "plugins.custom.oil" },
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
@@ -22,7 +23,8 @@ return {
   	opts = {
   		ensure_installed = {
   			"lua-language-server", "stylua",
-  			"rust-analyzer", "prettier"
+  			"rust-analyzer", "prettier", "pyright",
+        "tsserver", "jsonls", "gopls"
   		},
   	},
   },
@@ -32,7 +34,8 @@ return {
   	opts = {
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
-       "python", "rust"
+       "python", "rust", "go",
+        "typescript", "javascript"
   		},
   	},
   },
