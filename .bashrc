@@ -19,8 +19,7 @@ export BROWSER="chrome"
 # directories
 export REPOS="$HOME/Repos"
 export GITUSER="jman793"
-export GHREPOS="$REPOS/github.com/$GITUSER"
-export DOTFILES="$GHREPOS/dotfiles"
+export DOTFILES="$REPOS/dotfiles"
 export ICLOUD="$HOME/icloud"
 export CONFIG="$HOME/.config"
 
@@ -37,7 +36,7 @@ export HISTCONTROL=ignorespace
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Github Repos
-alias dot='cd $GHREPOS/dotfiles'
+alias dot='cd $REPOS/dotfiles'
 alias repos='cd $REPOS'
 
 alias c="clear"

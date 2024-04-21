@@ -3,9 +3,9 @@ return {
   { import = "plugins.custom.oil" },
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     config = function()
-      require "configs.conform"
+      require "configs.conformxit"
     end,
   },
 
@@ -19,24 +19,40 @@ return {
   },
 
   {
-  	"williamboman/mason.nvim",
-  	opts = {
-  		ensure_installed = {
-  			"lua-language-server", "stylua",
-  			"rust-analyzer", "prettier", "pyright",
-        "tsserver", "jsonls", "gopls"
-  		},
-  	},
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "stylua",
+        "rust-analyzer",
+        "prettier",
+        "pyright",
+        "typescript-language-server",
+        "jsonls",
+        "gopls",
+        "goimports",
+        "gofumpt",
+      },
+    },
   },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim", "lua", "vimdoc",
-       "python", "rust", "go",
-        "typescript", "javascript"
-  		},
-  	},
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "python",
+        "rust",
+        "toml",
+        "go",
+        "gomod",
+        "gowork",
+        "gosum",
+        "typescript",
+        "javascript",
+      },
+    },
   },
 }
