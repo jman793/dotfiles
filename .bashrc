@@ -10,7 +10,7 @@ set -o vi
 
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
 
-export VISUAL=nvim
+export VISUAL=code
 export EDITOR=nvim
 
 # config
@@ -70,7 +70,6 @@ alias sbr='source ~/.bashrc'
 alias s='startx'
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-	source "$HOME/.fzf.bash"
 	# brew bash completion
 	[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 fi

@@ -60,8 +60,8 @@ sudo apt install ripgrep gh
 sudo apt install gcc g++ unzip
 
 # ubuntu brew for neovim setup
-brew install neovim go lazygit rust python
-
+brew install neovim go lazygit rust python node 
+brew install --cask visual-studio-code
 # ubuntu specific notes
 # create symbolic link to neovim from vim when not using neovim on
 # Ubuntu systems, because I use the v alias everywhere.
