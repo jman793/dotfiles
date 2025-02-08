@@ -3,6 +3,8 @@ local options = {
     lua = { "stylua" },
     rust = { "rustfmt" },
     go = { "goimports", "gofumpt" },
+    c = { "clang-format" },
+    python = { "reorder-python-imports", "black" },
   },
   format_on_save = {
     timeout_ms = 500,

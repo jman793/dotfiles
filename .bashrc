@@ -60,6 +60,9 @@ alias sourceTmux="tmux source $CONFIG/tmux/.tmux.conf"
 # git
 alias lg='lazygit'
 
+# python
+alias python='python3'
+
 # ricing
 alias et='v ~/.config/awesome/themes/powerarrow/theme-personal.lua'
 alias ett='v ~/.config/awesome/themes/powerarrow-dark/theme-personal.lua'
@@ -73,3 +76,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 	# brew bash completion
 	[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 fi
+
+eval "$(starship init bash)"

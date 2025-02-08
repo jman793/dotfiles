@@ -1,12 +1,12 @@
 # themes from https://github.com/alacritty/alacritty-theme
 
-import = ["~/.config/alacritty/themes/themes/catppuccin_macchiato.toml"]
+general.import = ["~/.config/alacritty/themes/themes/dracula.toml"]
 
 [font]
 size = 15
 
 [font.normal]
-family = "JetBrains Mono"
+family = "JetBrainsMono Nerd Font"
 
 [window.padding]
 x = 7

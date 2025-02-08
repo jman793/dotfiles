@@ -1,0 +1,73 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[character]
+success_symbol = '[➜](blue bold)'
+
+[shell]
+disabled = false 
+
+# Adding some bracked segmants from https://starship.rs/presets/bracketed-segments
+[time]
+format = '\[[$time]($style)\]'
+
+[username]
+format = '\[[$user]($style)\]'
+
+[sudo]
+format = '\[[as $symbol]($style)\]'
+
+[rust]
+format = '\[[$symbol($version)]($style)\]'
+symbol = "󱘗 "
+
+[python]
+format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
+symbol = " "
+
+[os]
+format = '\[[$symbol]($style)\]'
+
+[os.symbols]
+Macos = " "
+
+[package]
+format = '\[[$symbol$version]($style)\]'
+symbol = "󰏗 "
+
+[nodejs]
+format = '\[[$symbol($version)]($style)\]'
+symbol = " "
+
+[lua]
+format = '\[[$symbol($version)]($style)\]'
+symbol = " "
+
+[golang]
+format = '\[[$symbol($version)]($style)\]'
+symbol = " "
+
+[git_branch]
+format = '\[[$symbol$branch]($style)\]'
+symbol = " "
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[git_commit]
+format = '([\[$symbol\]]($style))'
+tag_symbol = '  '
+
+[docker_context]
+format = '\[[$symbol$context]($style)\]'
+
+[c]
+format = '\[[$symbol($version(-$name))]($style)\]'
+symbol = " "
+
+[cmake]
+format = '\[[$symbol($version)]($style)\]'
+
+[cmd_duration]
+format = '\[[⏱ $duration]($style)\]'
