@@ -48,3 +48,5 @@ sudo apt install gcc g++ unzip
 # programming languages
 brew install neovim go lazygit rust python node 
 
+git config --global core.editor "nvim"
+
