@@ -167,6 +167,9 @@ alt-shift-right = ['join-with right', 'mode main']
   if.app-id = "md.obsidian"
   run = "move-node-to-workspace O"
 [[on-window-detected]]
+  if.app-id = "com.hnc.Discord"
+  run = "move-node-to-workspace D" # mnemonics D - Discord
+[[on-window-detected]]
   if.app-id = 'org.alacritty'
   run = 'move-node-to-workspace T' # mnemonics T - Terminal
 [[on-window-detected]]
@@ -176,7 +179,7 @@ alt-shift-right = ['join-with right', 'mode main']
   if.app-id = 'com.microsoft.Outlook'
   run = 'move-node-to-workspace E' # mnemonics E - Email
 [[on-window-detected]]
-  if.app-id = 'com.apple.iChat'
+  if.app-id = 'com.apple.MobileSMS'
   run = 'move-node-to-workspace M' # mnemonics M - Messages 
 [[on-window-detected]]
   check-further-callbacks = true

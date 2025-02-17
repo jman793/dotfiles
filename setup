@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# This is the setup script for my config. The idea is to be able to run
-# this after cloning the repo on a Mac or Ubuntu (WSL) system and be up
-# and running very quickly.
+# This is the setup script for my config.
 
 # create directories
 export XDG_CONFIG_HOME="$HOME"/.config
@@ -10,11 +8,10 @@ mndir -p "$XDG_CONFIG_HOME"/bash
 mkdir -p "$XDG_CONFIG_HOME"/alacritty
 mkdir -p "$XDG_CONFIG_HOME"/alacritty/themes
 mkdir -p "$XDG_CONFIG_HOME"/tmux
-# mkdir -p "$XDG_CONFIG_HOME"/wezterm
 
 git clone https://github.com/alacritty/alacritty-theme "$XDG_CONFIG_HOME"/alacritty/themes
 
-  Symbolic links
+# Symbolic links
 
 ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
 ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
@@ -38,13 +35,6 @@ brew install --cask nikitabobko/tap/aerospace
 brew install tmux
 brew install starship
 
-# ubuntu packages apt
-sudo apt install ripgrep gh
-
-# ubuntu apt neovim setup
-sudo apt install gcc g++ unzip
-
-# ubuntu brew for neovim setup
 # programming languages
 brew install neovim go lazygit rust python node 
 
