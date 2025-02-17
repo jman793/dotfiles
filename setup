@@ -9,7 +9,6 @@ export XDG_CONFIG_HOME="$HOME"/.config
 mndir -p "$XDG_CONFIG_HOME"/bash
 mkdir -p "$XDG_CONFIG_HOME"/alacritty
 mkdir -p "$XDG_CONFIG_HOME"/alacritty/themes
-mkdir -p "$XDG_CONFIG_HOME"/skhd
 mkdir -p "$XDG_CONFIG_HOME"/tmux
 # mkdir -p "$XDG_CONFIG_HOME"/wezterm
 
@@ -17,16 +16,16 @@ git clone https://github.com/alacritty/alacritty-theme "$XDG_CONFIG_HOME"/alacri
 
   Symbolic links
 
-ln -sf "$PWD/alacritty.toml" "$XDG_CONFIG_HOME"/alacritty/alacritty.toml
-ln -sf "$PWD/starship/starship.toml" "$XDG_CONFIG_HOME"/starship.toml
 ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
 ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
 ln -sf "$PWD/.inputrc" "$HOME"/.inputrc
 ln -sf "$PWD/tmux/.tmux.conf" "$XDG_CONFIG_HOME"/tmux
-ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
-ln -sf "$PWD/skhdrc" "$XDG_CONFIG_HOME"/skhd/skhdrc
 ln -sf "$PWD/newsboat/config" "$HOME"/.newsboat/config
 ln -sf "$PWD/newsboat/urls" "$HOME"/.newsboat/urls
+ln -sf "$PWD/alacritty.toml" "$XDG_CONFIG_HOME"/alacritty/alacritty.toml
+ln -sf "$PWD/starship/starship.toml" "$XDG_CONFIG_HOME"/starship.toml
+ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
+ln -sf "$PWD/aerospace.toml" "$XDG_CONFIG_HOME"/aerospace/aerospace.toml
 
 # Packages
 
@@ -35,6 +34,7 @@ ln -sf "$PWD/newsboat/urls" "$HOME"/.newsboat/urls
 
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask alacritty
+brew install --cask nikitabobko/tap/aerospace
 brew install tmux
 brew install starship
 

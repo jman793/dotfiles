@@ -11,3 +11,6 @@ family = "JetBrainsMono Nerd Font"
 [window.padding]
 x = 7
 y = 0
+
+[terminal]
+shell = "/bin/bash"
