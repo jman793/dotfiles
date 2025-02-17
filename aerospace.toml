@@ -156,7 +156,7 @@ alt-shift-right = ['join-with right', 'mode main']
   run = "move-node-to-workspace S"
 [[on-window-detected]]
   if.app-id = "com.spotify.client"
-  run = "move-node-to-workspace M" # Music; Spotify
+  run = "move-node-to-workspace M" # Spotify
 [[on-window-detected]]
   if.app-id = "com.apple.iCal"
   run = "move-node-to-workspace C"
@@ -180,7 +180,7 @@ alt-shift-right = ['join-with right', 'mode main']
   run = 'move-node-to-workspace E' # mnemonics E - Email
 [[on-window-detected]]
   if.app-id = 'com.apple.MobileSMS'
-  run = 'move-node-to-workspace M' # mnemonics M - Messages 
+  run = 'move-node-to-workspace I' # mnemonics M - IMessages 
 [[on-window-detected]]
   check-further-callbacks = true
   run = 'layout floating'
