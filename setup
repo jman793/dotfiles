@@ -10,7 +10,7 @@ mkdir -p "$XDG_CONFIG_HOME"/alacritty/themes
 mkdir -p "$XDG_CONFIG_HOME"/tmux
 
 git clone https://github.com/alacritty/alacritty-theme "$XDG_CONFIG_HOME"/alacritty/themes
-
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Symbolic links
 
 ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
