@@ -35,16 +35,8 @@ export HISTCONTROL=ignorespace
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
-# Github Repos
-alias dot='cd $REPOS/dotfiles'
-alias repos='cd $REPOS'
-
-alias c="clear"
-alias icloud="cd \$ICLOUD"
-
 # ls
 alias ls='ls --color=auto'
-alias ll='ls -la'
 alias la='ls -lathr'
 
 # finds all files recursively and sorts by last modification, ignore hidden files
@@ -57,20 +49,16 @@ alias e='exit'
 # Source tmux
 alias sourceTmux="tmux source $CONFIG/tmux/.tmux.conf"
 
-# git
-alias lg='lazygit'
+# Source bash
+alias sbrc="source ~/.bashrc"
 
-# python
-alias python='python3'
+# Search Aliases 
+alias fman="compgen -c | fzf | xargs man"
+alias frepo="ls $REPOS | fzf"
 
-# ricing
-alias et='v ~/.config/awesome/themes/powerarrow/theme-personal.lua'
-alias ett='v ~/.config/awesome/themes/powerarrow-dark/theme-personal.lua'
-alias er='v ~/.config/awesome/rc.lua'
-alias eb='v ~/.bashrc'
-alias ev='cd ~/.config/nvim/ && v init.lua'
-alias sbr='source ~/.bashrc'
-alias s='startx'
+# Naviation Aliases 
+alias grepo='cd $REPOS/"$(frepo)"'
+
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	# brew bash completion
