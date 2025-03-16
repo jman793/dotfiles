@@ -13,10 +13,6 @@ return {
     lazy = false,
   },
   {
-    "theprimeagen/refactoring.nvim",
-    lazy = false,
-  },
-  {
     "mbbill/undotree",
     lazy = false,
   },

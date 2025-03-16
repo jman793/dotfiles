@@ -5,6 +5,20 @@ vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", ";", ":", { desc = "CMD enter command mode" })
 vim.keymap.set("i", "jj", "<ESC>")
+vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- life changing
+vim.keymap.set("n", "<CR>", '@="m`o<C-V><Esc>``"<CR>')
+vim.keymap.set("n", "<S-CR>", '@="m`O<C-V><Esc>``"<CR>')
 
 -- Lsp Mappings
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go To Definition" })
@@ -29,14 +43,6 @@ vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory." 
 
 -- Lazygit Mappings
 vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>")
-
--- Refactoring Mappings
-vim.api.nvim_set_keymap(
-  "v",
-  "<leader>ri",
-  [[ <Esc><Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]],
-  { noremap = true, silent = true, expr = false }
-)
 
 -- Telescope Mappings
 local builtin = require "telescope.builtin"
