@@ -9,6 +9,23 @@ return {
     end,
   },
   {
+    "theprimeagen/harpoon",
+    lazy = false,
+  },
+  {
+    "theprimeagen/refactoring.nvim",
+    lazy = false,
+  },
+  {
+    "mbbill/undotree",
+    lazy = false,
+  },
+  {
+    "folke/trouble.nvim",
+    opts = {}, -- for default options, refer to the configuration section for custom setup.
+    cmd = "Trouble",
+  },
+  {
     "kdheepak/lazygit.nvim",
     lazy = false,
     cmd = {
