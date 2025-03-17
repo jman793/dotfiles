@@ -1,6 +1,7 @@
 return {
   { import = "plugins.custom.rust_config" },
   { import = "plugins.custom.oil" },
+  { import = "plugins.custom.floating_terminal" },
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save

@@ -80,3 +80,6 @@ end)
 vim.keymap.set("n", "<C-s>", function()
   ui.nav_file(4)
 end)
+
+-- Floating Terminal Mappings
+vim.keymap.set("n", "<leader>ft", "<cmd>FloatingTerminal<cr>i", { desc = "Toggle Floating Terminal" })
