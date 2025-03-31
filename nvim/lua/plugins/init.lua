@@ -10,13 +10,6 @@ return {
     end,
   },
   {
-    "rcasia/neotest-java",
-    ft = "java",
-    dependencies = {
-      "mfussenegger/nvim-jdtls",
-    },
-  },
-  {
     "stevearc/oil.nvim",
     opts = {
       columns = {

@@ -11,7 +11,6 @@ return {
     "alfaix/neotest-gtest",
     "nvim-neotest/neotest-plenary",
     "leoluz/nvim-dap-go",
-    "rcasia/neotest-java",
   },
   config = function()
     require("neotest").setup {
@@ -27,7 +26,6 @@ return {
         },
         require "neotest-gtest",
         require "neotest-plenary",
-        require "neotest-java",
       },
     }
   end,
