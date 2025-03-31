@@ -1,7 +1,42 @@
 return {
   { import = "plugins.custom.rust_config" },
-  { import = "plugins.custom.oil" },
-  { import = "plugins.custom.floating_terminal" },
+  { import = "plugins.custom.neotest" },
+  { import = "plugins.custom.dap" },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    event = "VeryLazy",
+    opts = function()
+      return require "plugins.custom.null-ls"
+    end,
+  },
+  {
+    "rcasia/neotest-java",
+    ft = "java",
+    dependencies = {
+      "mfussenegger/nvim-jdtls",
+    },
+  },
+  {
+    "stevearc/oil.nvim",
+    opts = {
+      columns = {
+        "icon",
+      },
+      default_file_explorer = true,
+      keymaps_help = {
+        border = "rounded",
+      },
+      use_default_keymaps = true,
+      view_options = {
+        show_hidden = true,
+      },
+    },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
+    "folke/todo-comments.nvim",
+    lazy = false,
+  },
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
@@ -64,6 +99,7 @@ return {
         "goimports",
         "gofumpt",
         "clangd",
+        "clang-format",
       },
     },
   },
@@ -85,6 +121,7 @@ return {
         "typescript",
         "javascript",
         "c",
+        "cpp",
       },
     },
   },

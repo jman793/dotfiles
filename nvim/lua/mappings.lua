@@ -18,6 +18,9 @@ vim.keymap.set("n", "<leader>rn", "<cmd>set rnu!<CR>", { desc = "toggle relative
 vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
 vim.keymap.set("n", "<leader>l", "<CMD>bnext<CR>")
 vim.keymap.set("n", "<leader>h", "<CMD>bprev<CR>")
+vim.keymap.set("n", "<leader>x", "<CMD>bd<CR>")
+vim.keymap.set("n", "<leader>cc", "<CMD>cclose<CR>")
+vim.keymap.set("n", "<leader>co", "<CMD>copen<CR>")
 
 vim.keymap.set("n", "<leader>em", "<cmd>e ~/Repos/dotfiles/nvim/lua/mappings.lua<cr>")
 
@@ -110,7 +113,7 @@ vim.keymap.set("n", "<C-s>", function()
 end)
 
 -- Floating Terminal Mappings
-vim.keymap.set("n", "<leader>ft", "<cmd>FloatingTerminal<cr>i", { desc = "Toggle Floating Terminal" })
+vim.keymap.set("n", "<leader>tt", "<cmd>FloatingTerminal<cr>i", { desc = "Toggle Floating Terminal" })
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
 
 -- Gitsigns Mappings
@@ -166,3 +169,52 @@ vim.keymap.set("n", "<leader>gq", gitsigns.setqflist, { desc = "Git Hunks Qflist
 -- Toggles
 vim.keymap.set("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "Current Link Blame" })
 vim.keymap.set("n", "<leader>td", gitsigns.toggle_deleted)
+
+-- Deubgger Mappings
+-- vim.keymap.set("n", "<leader>du", require("dapui").toggle, { desc = "Toggle Deubgger UI" })
+--
+-- vim.keymap.set("n", "<leader>db", "<CMD>DapToggleBreakpoint<CR>", { desc = "Toggle Breakpoint" })
+-- vim.keymap.set("n", "<leader>dc", "<CMD>DapContinue<CR>", { desc = "Debugger Continue" })
+
+-- NeoTest Mappings
+local neo_test = require "neotest"
+vim.keymap.set("n", "<leader>tr", function()
+  neo_test.run.run {
+    suite = false,
+    testify = true,
+  }
+end, { desc = "Debug: Running Nearest Test" })
+
+vim.keymap.set("n", "<leader>tv", function()
+  neo_test.summary.toggle()
+end, { desc = "Debug: Summary Toggle" })
+
+vim.keymap.set("n", "<leader>ts", function()
+  neo_test.run.run {
+    suite = true,
+    testify = true,
+  }
+end, { desc = "Debug: Running Test Suite" })
+
+vim.keymap.set("n", "<leader>td", function()
+  neo_test.run.run {
+    suite = false,
+    testify = true,
+    strategy = "dap",
+  }
+end, { desc = "Debug: Debug Nearest Test" })
+
+vim.keymap.set("n", "<leader>to", function()
+  neo_test.output.open()
+end, { desc = "Debug: Open test output" })
+
+vim.keymap.set("n", "<leader>ta", function()
+  neo_test.run.run(vim.fn.getcwd())
+end, { desc = "Debug: Open test output" })
+
+-- TODO Comments
+local todo_comments = require "todo-comments"
+todo_comments.setup()
+
+vim.keymap.set("n", "<leader>ft", "<CMD>TodoTelescope<CR>", { desc = "Find Todo Comments" })
+vim.keymap.set("n", "<leader>qt", "<CMD>TodoQuickFix<CR>", { desc = "Find Todo Comments" })
