@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# This is the setup script for my config.
+
+# create directories
+export XDG_CONFIG_HOME="$HOME"/.config
+mndir -p "$XDG_CONFIG_HOME"/bash
+mkdir -p "$XDG_CONFIG_HOME"/alacritty
+mkdir -p "$XDG_CONFIG_HOME"/alacritty/themes
+mkdir -p "$XDG_CONFIG_HOME"/tmux
+
+git clone https://github.com/alacritty/alacritty-theme "$XDG_CONFIG_HOME"/alacritty/themes
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# Symbolic links
+
+ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
+ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
+ln -sf "$PWD/.inputrc" "$HOME"/.inputrc
+ln -sf "$PWD/tmux/.tmux.conf" "$XDG_CONFIG_HOME"/tmux
+ln -sf "$PWD/newsboat/config" "$HOME"/.newsboat/config
+ln -sf "$PWD/newsboat/urls" "$HOME"/.newsboat/urls
+ln -sf "$PWD/alacritty.toml" "$XDG_CONFIG_HOME"/alacritty/alacritty.toml
+ln -sf "$PWD/starship/starship.toml" "$XDG_CONFIG_HOME"/starship.toml
+ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
+ln -sf "$PWD/aerospace.toml" "$XDG_CONFIG_HOME"/aerospace/aerospace.toml
+
+# Packages
+
+# install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask alacritty
+brew install --cask nikitabobko/tap/aerospace
+brew install tmux
+brew install starship
+brew install bat
+brew install lazygit
+brew install lazydocker
+
+# programming languages
+brew install neovim go rust python node 
+
+git config --global core.editor "nvim"
+

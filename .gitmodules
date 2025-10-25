@@ -1,0 +1,6 @@
+[submodule "init.lua"]
+	path = init.lua
+	url = https://github.com/jman793/init.lua
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/jman793/init.lua

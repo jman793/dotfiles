@@ -1,0 +1,16 @@
+# themes from https://github.com/alacritty/alacritty-theme
+
+general.import = ["~/.config/alacritty/themes/themes/rose_pine.toml.toml"]
+
+[font]
+size = 15
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[window.padding]
+x = 7
+y = 0
+
+[terminal]
+shell = "/bin/bash"
