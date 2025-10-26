@@ -38,6 +38,9 @@ brew install bat
 brew install lazygit
 brew install lazydocker
 
+# Get up to date bash
+brew install bash
+
 # programming languages
 brew install neovim go rust python node 
 

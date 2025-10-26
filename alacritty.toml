@@ -12,5 +12,6 @@ family = "JetBrainsMono Nerd Font"
 x = 7
 y = 0
 
+# Use up to date version of bash
 [terminal]
-shell = "/bin/bash"
+shell = "/opt/homebrew/bin/bash"
