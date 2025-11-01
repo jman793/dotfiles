@@ -23,6 +23,9 @@ export DOTFILES="$REPOS/dotfiles"
 export ICLOUD="$HOME/icloud"
 export CONFIG="$HOME/.config"
 
+#Add Ghostty to $PATH
+export PATH="/Applications/Ghostty.app/Contents/MacOS:$PATH"
+
 # Add brew to $PATH
 export PATH="/opt/homebrew/bin:$PATH"
 
