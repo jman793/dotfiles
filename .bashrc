@@ -20,6 +20,7 @@ export BROWSER="chrome"
 export REPOS="$HOME/Repos"
 export GITUSER="jman793"
 export DOTFILES="$REPOS/dotfiles"
+export SCRIPTS="$DOTFILES/scripts"
 export ICLOUD="$HOME/icloud"
 export CONFIG="$HOME/.config"
 
@@ -28,6 +29,9 @@ export PATH="/Applications/Ghostty.app/Contents/MacOS:$PATH"
 
 # Add brew to $PATH
 export PATH="/opt/homebrew/bin:$PATH"
+
+# Add scripts to $PATH
+export PATH="$SCRIPTS:$PATH"
 
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -62,9 +66,10 @@ alias frepo="ls $REPOS | fzf"
 # Naviation Aliases 
 alias grepo='cd $REPOS/"$(frepo)"'
 
+# ~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~~~~~~~
 
+# brew
 if [[ "$OSTYPE" == "darwin"* ]]; then
-	# brew bash completion
 	[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 fi
 
